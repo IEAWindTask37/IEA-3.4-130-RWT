@@ -1,0 +1,81 @@
+--------- AeroDyn v14.04.* INPUT FILE -------------------------------------------------------------------------
+Aerodynamic input properties; Compatible with AeroDyn v14
+"BEDDOES"      StallMod       - Dynamic stall included [BEDDOES or STEADY] (unquoted string)
+"USE_CM"       UseCm          - Use aerodynamic pitching moment model? [USE_CM or NO_CM] (unquoted string)
+"EQUIL"        InfModel       - Inflow model [DYNIN or EQUIL] (unquoted string)
+"SWIRL"        IndModel       - Induction-factor model [NONE or WAKE or SWIRL] (unquoted string)
+   0.005       AToler         - Induction-factor tolerance (convergence criteria) (-)
+"PRANDtl"      TLModel        - Tip-loss model (EQUIL only) [PRANDtl, GTECH, or NONE] (unquoted string)
+"PRANDtl"      HLModel        - Hub-loss model (EQUIL only) [PRANdtl or NONE] (unquoted string)
+       0       TwrShad        - INSTEAD OF:   0.0      TwrShad     - Tower-shadow velocity deficit (-)
+False          TwrPotent      - Calculate tower potential flow (flag)  INSTEAD OF  9999.9      ShadHWid    - Tower-shadow half width (m)
+False          TwrShadow      - Calculate tower shadow (flag)          INSTEAD OF  9999.9      T_Shad_Refpt- Tower-shadow reference point (m)
+9999.9         ShadHWid       - Tower-shadow half width (m)
+9999.9         T_Shad_Refpt   - Tower-shadow reference point (m).
+   1.225       AirDens        - Air density (kg/m^3)
+   1.464E-5    KinVisc        - Kinematic air viscosity [CURRENTLY IGNORED] (m^2/sec)
+   default     DTAero         - Time interval for aerodynamic calculations (sec) !bjj: was 0.02479
+   7          NumFoil        - Number of airfoil files (-)
+"AeroData\circle.dat"     FoilNm      - Names of the airfoil files[NumFoil lines] (quoted strings)
+"AeroData\FX77-W-500.dat"
+"AeroData\FX77-W-400.dat"
+"AeroData\DU00-W2-350.dat"
+"AeroData\DU97-W-300.dat"
+"AeroData\DU91-W2-250.dat"
+"AeroData\DU08-W-210.dat"
+54        BldNodes    - Number of blade nodes used for analysis (-)
+RNodes      AeroTwst        DRNodes  	Chord       NFoil  PrnElm
+ 2.3150  19.9360  0.6300  2.6000  1  NOPRINT 
+ 2.9450  19.7988  0.6300  2.6000  1  NOPRINT 
+ 3.5750  19.6452  0.6300  2.6103  1  NOPRINT 
+ 4.2050  19.4771  0.6300  2.6503  1  NOPRINT 
+ 4.8350  19.2936  0.6300  2.7284  1  NOPRINT 
+ 5.4650  19.0928  0.6300  2.8436  1  NOPRINT 
+ 6.0950  18.8732  0.6300  2.9715  1  NOPRINT 
+ 6.7250  18.6336  0.6300  3.0939  1  NOPRINT 
+ 7.6700  18.2252  1.2600  3.2777  2  NOPRINT 
+ 8.9300  17.5046  1.2600  3.5090  2  NOPRINT 
+ 10.1900  16.4380  1.2600  3.7110  2  NOPRINT 
+ 11.4500  15.0881  1.2600  3.8813  2  NOPRINT 
+ 12.7100  13.6574  1.2600  4.0210  3  NOPRINT 
+ 13.9700  12.3485  1.2600  4.1309  3  NOPRINT 
+ 15.2300  11.2396  1.2600  4.2120  3  NOPRINT 
+ 16.4900  10.2212  1.2600  4.2653  3  NOPRINT 
+ 17.7500  9.2130  1.2600  4.2918  3  NOPRINT 
+ 19.0100  8.2273  1.2600  4.2925  4  NOPRINT 
+ 20.2700  7.2766  1.2600  4.2693  4  NOPRINT 
+ 21.5300  6.3731  1.2600  4.2240  4  NOPRINT 
+ 22.7900  5.5294  1.2600  4.1586  4  NOPRINT 
+ 24.0500  4.7577  1.2600  4.0749  4  NOPRINT 
+ 25.3100  4.0705  1.2600  3.9749  4  NOPRINT 
+ 26.5700  3.4800  1.2600  3.8605  4  NOPRINT 
+ 27.8300  2.9865  1.2600  3.7339  4  NOPRINT 
+ 29.0900  2.5709  1.2600  3.5978  5  NOPRINT 
+ 30.3500  2.2157  1.2600  3.4559  5  NOPRINT 
+ 31.6100  1.9121  1.2600  3.3121  5  NOPRINT 
+ 32.8700  1.6515  1.2600  3.1701  5  NOPRINT 
+ 34.1300  1.4250  1.2600  3.0334  5  NOPRINT 
+ 35.3900  1.2239  1.2600  2.9040  5  NOPRINT 
+ 36.6500  1.0395  1.2600  2.7822  5  NOPRINT 
+ 37.9100  0.8630  1.2600  2.6679  5  NOPRINT 
+ 39.1700  0.6857  1.2600  2.5612  5  NOPRINT 
+ 40.4300  0.5090  1.2600  2.4622  6  NOPRINT 
+ 41.6900  0.3461  1.2600  2.3707  6  NOPRINT 
+ 42.9500  0.2019  1.2600  2.2868  6  NOPRINT 
+ 44.2100  0.0716  1.2600  2.2106  6  NOPRINT 
+ 45.4700  -0.0493  1.2600  2.1419  6  NOPRINT 
+ 46.7300  -0.1657  1.2600  2.0809  6  NOPRINT 
+ 47.9900  -0.2821  1.2600  2.0276  6  NOPRINT 
+ 49.2500  -0.4032  1.2600  1.9818  6  NOPRINT 
+ 50.5100  -0.5337  1.2600  1.9437  7  NOPRINT 
+ 51.7700  -0.6783  1.2600  1.9133  7  NOPRINT 
+ 53.0300  -0.8334  1.2600  1.8896  7  NOPRINT 
+ 54.2900  -0.9910  1.2600  1.8671  7  NOPRINT 
+ 55.5500  -1.1563  1.2600  1.8355  7  NOPRINT 
+ 56.8100  -1.3450  1.2600  1.7838  7  NOPRINT 
+ 58.0700  -1.5724  1.2600  1.7007  7  NOPRINT 
+ 59.3300  -1.8743  1.2600  1.5753  7  NOPRINT 
+ 60.5900  -2.2946  1.2600  1.3962  7  NOPRINT 
+ 61.8500  -2.8402  1.2600  1.1525  7  NOPRINT 
+ 63.1100  -3.4918  1.2600  0.8329  7  NOPRINT 
+ 64.3700  -4.2301  1.2600  0.4264  7  NOPRINT 
