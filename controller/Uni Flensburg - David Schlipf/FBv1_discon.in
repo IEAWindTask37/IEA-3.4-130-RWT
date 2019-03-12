@@ -1,0 +1,45 @@
+*********************************************************************
+* Feedback controller v1 for the 3.4 MW turbine of IEA Wind Task 37 
+* (c) SWE, sowento, WETI 
+* Compiled with case FBv1 on 03-Feb-2019 20:52:20 by schlipf
+* Communication Interval fixed to: 0.0125 s!
+*********************************************************************
+* ------------------
+* Static parameters
+* ------------------
+Parameter.CPC.Omega_g_rated           = 119.3848
+Parameter.VSC.M_g_rated               = 28797.6324
+Parameter.CPC.theta_min               = 0.020944
+Parameter.VSC.Omega_g_1d5             = 81.262
+Parameter.VSC.k                       = 1.9
+* ------------------
+* Dynamic parameters
+* ------------------
+Parameter.CPC.theta_K                 = 0.34907
+Parameter.CPC.kp                      = 0.025
+Parameter.CPC.Ti                      = 10
+Parameter.VSC.kp                      = 3000
+Parameter.VSC.Ti                      = 2.5
+Parameter.VSC.Delta_Omega_g           = 11.9385
+Parameter.VSC.Delta_theta             = 0.34907
+Parameter.VSC.Delta_P                 = 3350000
+* ------------------
+* Other parameters
+* ------------------
+Parameter.VSC.i_G_max                 = 1.1
+Parameter.Filter.LowPass.Enable       = 1
+Parameter.Filter.LowPass.f_cutoff     = 1
+Parameter.Filter.LowPass2.f_cutoff    = 0.02
+Parameter.Filter.LowPass3.f_cutoff    = 0.01
+Parameter.Filter.NotchFilter.Enable   = 1
+Parameter.Filter.NotchFilter.Gain     = 0.030928
+Parameter.Filter.NotchFilter.BW       = 0.1
+Parameter.Filter.NotchFilter.D        = 0.01
+* ------------------
+* PitchA ctuator
+* ------------------
+Parameter.PitchActuator.omega         = 10
+Parameter.PitchActuator.xi            = 0.8
+Parameter.PitchActuator.theta_dot_max = 0.12217
+Parameter.PitchActuator.theta_max     = 1.5708
+Parameter.PitchActuator.theta_min     = 0
