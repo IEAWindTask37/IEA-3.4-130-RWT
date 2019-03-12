@@ -1,5 +1,5 @@
 *********************************************************************
-* Feedback controller v1 for the 3.4 MW turbine of IEA Wind Task 37 
+* Feedback controller v1.0 for the 3.4 MW turbine of IEA Wind Task 37 
 * (c) SWE, sowento, WETI 
 * Compiled with case FBv1 on 03-Feb-2019 20:52:20 by schlipf
 * Communication Interval fixed to: 0.0125 s!
@@ -36,7 +36,7 @@ Parameter.Filter.NotchFilter.Gain     = 0.030928
 Parameter.Filter.NotchFilter.BW       = 0.1
 Parameter.Filter.NotchFilter.D        = 0.01
 * ------------------
-* PitchA ctuator
+* Pitch Actuator
 * ------------------
 Parameter.PitchActuator.omega         = 10
 Parameter.PitchActuator.xi            = 0.8
