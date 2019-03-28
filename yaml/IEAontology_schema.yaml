@@ -400,7 +400,7 @@ definitions:
                     description: Name of the layer to lock the edge
         
         
-        point_x_local_defined:
+        offset:
             type: object
             description: dimensional offset in respect to the pitch axis along the x axis, which is the chord line rotated by a user-defined angle. Negative values move the midpoint towards the leading edge, positive towards the trailing edge
             required:
@@ -411,12 +411,10 @@ definitions:
                     $ref: "#/definitions/distributed_data/grid_nd"
                 values: 
                     $ref: "#/definitions/distributed_data/length"
-                rotation:
-                    $ref: "#/definitions/distributed_data/angle"
         
-        point_x_abs_defined:
+        rotation:
             type: object
-            description: dimensional offset in respect to an arbitrary coordinate system (e.g. the blade root c.s.)
+            description: rotation of the chord axis around the pitch axis
             required:
                 - grid
                 - values
@@ -424,10 +422,7 @@ definitions:
                 grid: 
                     $ref: "#/definitions/distributed_data/grid_nd"
                 values: 
-                    $ref: "#/definitions/distributed_data/length"
-                reference_frame: 
-                    type: string
-                    description: corresponding reference frame
+                    $ref: "#/definitions/distributed_data/angle"
         
         
         
@@ -952,18 +947,6 @@ definitions:
                             $ref: "#/definitions/distributed_data/grid_nd"
                         values: 
                             $ref: "#/definitions/distributed_data/angle"
-                start_nd_arc:
-                    $ref: "#/definitions/distributed_data/nd_arc_position"
-                end_nd_arc:
-                    $ref: "#/definitions/distributed_data/nd_arc_position"
-                
-                
-                point_x_local:
-                    $ref: "#/definitions/distributed_data/point_x_local_defined"
-                
-                point_x_abs:
-                    $ref: "#/definitions/distributed_data/point_x_abs_defined"
-                
                 width:
                     type: object
                     description: dimensional width of the component along the arc
@@ -975,6 +958,17 @@ definitions:
                             $ref: "#/definitions/distributed_data/grid_nd"
                         values: 
                             $ref: "#/definitions/distributed_data/length"
+                midpoint_nd_arc:
+                    $ref: "#/definitions/distributed_data/nd_arc_position"
+                start_nd_arc:
+                    $ref: "#/definitions/distributed_data/nd_arc_position"
+                end_nd_arc:
+                    $ref: "#/definitions/distributed_data/nd_arc_position"
+                rotation:
+                    $ref: "#/definitions/distributed_data/rotation"
+                offset_x_pa:
+                    $ref: "#/definitions/distributed_data/offset"
+                
                 
                 
                 
@@ -987,8 +981,6 @@ definitions:
             type: object
             required:
                 - name
-                - start_nd_arc
-                - end_nd_arc
             properties:
                 name:
                     type: string
@@ -997,10 +989,10 @@ definitions:
                     $ref: "#/definitions/distributed_data/nd_arc_position"
                 end_nd_arc:
                     $ref: "#/definitions/distributed_data/nd_arc_position"
-                point_x_local:
-                    $ref: "#/definitions/distributed_data/point_x_local_defined"
-                point_x_abs:
-                    $ref: "#/definitions/distributed_data/point_x_abs_defined"
+                rotation:
+                    $ref: "#/definitions/distributed_data/rotation"
+                offset_x_pa:
+                    $ref: "#/definitions/distributed_data/offset"
                 
                 
                 
@@ -1154,9 +1146,52 @@ definitions:
                             minimum: 0
                 ply_thickness:
                     type: number
-                    description: Ply thickness for composite materials
+                    description: Ply thickness of the composite material
                     unit: m
-    
+                fvf:
+                    type: number
+                    description: Fiber volume fraction of the composite material
+                    unit: none
+                A: 
+                    description: Fatigue S/N curve fitting parameter S=A*N^(-1/m)
+                    oneOf:
+                        - type: number
+                          unit: none
+                          minimum: 0
+                        - type: array
+                          items: 
+                            type: number
+                            unit: none
+                            minItems: 3
+                            maxItems: 3
+                            uniqueItems: false
+                            minimum: 0
+                m: 
+                    description: Fatigue S/N curve fitting parameter S=A*N^(-1/m)
+                    oneOf:
+                        - type: number
+                          unit: none
+                          minimum: 0
+                        - type: array
+                          items: 
+                            type: number
+                            unit: none
+                            minItems: 3
+                            maxItems: 3
+                            uniqueItems: false
+                            minimum: 0
+                R: 
+                    description: Fatigue stress ratio
+                    oneOf:
+                        - type: number
+                          unit: none
+                        - type: array
+                          items: 
+                            type: number
+                            unit: none
+                            minItems: 3
+                            maxItems: 3
+                            uniqueItems: false
 
         
         
