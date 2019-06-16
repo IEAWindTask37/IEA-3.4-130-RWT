@@ -4,7 +4,7 @@ Servodyn main input file
 False         Echo         - Echo input data to <RootName>.ech (flag)
 "default"     DT           - Communication interval for controllers (s) (or "default")
 ---------------------- PITCH CONTROL -------------------------------------------
-          0   PCMode       - Pitch control mode {0: none, 3: user-defined from routine PitchCntrl, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
+          5   PCMode       - Pitch control mode {0: none, 3: user-defined from routine PitchCntrl, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
           0   TPCOn        - Time to enable active pitch control (s) [unused when PCMode=0]
      9999.9   TPitManS(1)  - Time to start override pitch maneuver for blade 1 and end standard pitch control (s)
      9999.9   TPitManS(2)  - Time to start override pitch maneuver for blade 2 and end standard pitch control (s)
@@ -63,7 +63,7 @@ False         CompNTMD     - Compute nacelle tuned mass damper {true/false} (fla
 False         CompTTMD     - Compute tower tuned mass damper {true/false} (flag)
 ""            TTMDfile     - Name of the file for tower tuned mass damper (quoted string) [unused when CompTTMD is false]
 ---------------------- BLADED INTERFACE ---------------------------------------- [used only with Bladed Interface]
-"ServoData/DISCON.dll"     - DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
+"ServoData/DISCON_IEA_landbased.dll"     - DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
 "DISCON.IN"   DLL_InFile   - Name of input file sent to the DLL (-) [used only with Bladed Interface]
 "DISCON"      DLL_ProcName - Name of procedure in DLL to be called (-) [case sensitive; used only with DLL Interface]
 "default"     DLL_DT       - Communication interval for dynamic library (s) (or "default") [used only with Bladed Interface]
