@@ -1,5 +1,5 @@
-name: IEA37 onshore wind turbine
-description: version from 28/03/2019
+name: IEA-3.4-13-RWT
+description: version from 29/10/2019
 
 components:
     blade:
