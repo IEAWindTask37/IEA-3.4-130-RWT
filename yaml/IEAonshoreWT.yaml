@@ -557,6 +557,14 @@ materials:
       nu: 0.5
       alpha: 0.0
       G: 1520000.0
+      ply_t: 0.0005
+      fvf: .nan
+      fwf: .nan
+      waste: 0.25
+      unit_cost: 7.23
+      component_id: 0
+      Xt: .nan
+      Xc: .nan
    -  name: triax
       description: Standard triax from ...
       source: Material coming from ...
@@ -569,6 +577,14 @@ materials:
       Xt: [600.0e+006, 600.0e+006, 600.0e+006]
       Xc: [600.0e+006, 600.0e+006, 600.0e+006]
       S: [500.0e+006, 200.0e+006, 200.0e+006]
+      fvf: 0.4793
+      fwf: 0.6754
+      waste: 0.15
+      unit_cost: 2.86
+      component_id: 2
+      area_density_dry: 1.112
+      fiber_density: 2600.
+      roll_mass: 181.4368
    -  name: biax
       description: Standard biax from ...
       source: Material coming from ...
@@ -581,6 +597,14 @@ materials:
       Xt: [600.0e+006, 600.0e+006, 600.0e+006]
       Xc: [600.0e+006, 600.0e+006, 600.0e+006]
       S: [500.0e+006, 200.0e+006, 200.0e+006]
+      fvf: 0.4793
+      fwf: 0.6754
+      waste: 0.15
+      unit_cost: 3.00
+      component_id: 3
+      area_density_dry: 1.112
+      fiber_density: 2600.
+      roll_mass: 181.4368
    -  name: ud
       description: Standard ud from ...
       source: Material coming from ...
@@ -593,6 +617,13 @@ materials:
       Xt: [600.0e+006, 600.0e+006, 600.0e+006]
       Xc: [600.0e+006, 600.0e+006, 600.0e+006]
       S: [500.0e+006, 200.0e+006, 200.0e+006]
+      fvf: 0.5448
+      fwf: 0.7302
+      waste: 0.05
+      unit_cost: 1.87
+      component_id: 4
+      area_density_dry: 1.858
+      fiber_density: 2600.
    -  name: balsa
       description: Balsa filler from ...
       source: Material coming from ...
@@ -605,6 +636,9 @@ materials:
       Xc: 0.4e+006
       S: 0.31e+006
       G: 16666666.666666666
+      waste: 0.2
+      unit_cost: 13.
+      component_id: 1
    -  name: foam
       description: Foam filler from ...
       source: Material coming from ...
@@ -617,6 +651,9 @@ materials:
       Xc: 0.4e+006
       S: 0.31e+006
       G: 16666666.666666666
+      waste: 0.2
+      unit_cost: 13.
+      component_id: 1
    -  name: adhesive
       description: Adhesive from ...
       source: Material coming from ...
@@ -634,6 +671,8 @@ materials:
       E: 1.e+6
       rho: 1150.
       orth: 0
+      unit_cost: 13.
+      waste: 0.2
    -  name: steel
       description: Steel of the tower
       source: Standard steel with higher density to account for auxiliary systems of the tower (elevator, stairs, etc)
@@ -643,7 +682,7 @@ materials:
       nu: 0.3
       alpha: 0.0
       Xt: 355.e+006
-      Xc: 355.e+006   
+      Xc: 355.e+006
 assembly:
     turbine_class: III
     turbulence_class: A
