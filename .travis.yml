@@ -23,5 +23,7 @@ install:
   - conda activate fusedwind-environment
   - conda install -q --yes jsonschema pyyaml pytest
   - git clone https://github.com/IEAWindTask37/windIO
+  - pwd
+  - ls
 script:
   - py.test
