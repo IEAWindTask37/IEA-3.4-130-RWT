@@ -22,6 +22,8 @@ install:
   - conda create -q -n fusedwind-environment python=$TRAVIS_PYTHON_VERSION
   - conda activate fusedwind-environment
   - conda install -q --yes jsonschema pyyaml pytest
+  - cd ..
   - git clone https://github.com/IEAWindTask37/windIO
+  - cd IEA-3.4-130-RWT
 script:
   - py.test

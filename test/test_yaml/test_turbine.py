@@ -3,7 +3,7 @@ import os
 from jsonschema import validate
 import yaml
 
-path2schema = os.path.dirname( os.path.dirname( os.path.dirname( os.path.realpath(__file__) ) ) ) + os.sep + 'windIO' + os.sep + 'windIO' + os.sep + 'turbine' + os.sep + "IEAontology_schema.yaml"
+path2schema = os.path.dirname( os.path.dirname( os.path.dirname( os.path.dirname( os.path.realpath(__file__) ) ) ) ) + os.sep + 'windIO' + os.sep + 'windIO' + os.sep + 'turbine' + os.sep + "IEAontology_schema.yaml"
 
 class TestRegression(unittest.TestCase):
     
