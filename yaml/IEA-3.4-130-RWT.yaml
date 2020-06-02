@@ -681,7 +681,7 @@ materials:
       rho: 1150.
       nu: 0.3
       orth: 0
-      unit_cost: 13.
+      unit_cost: 3.63
       waste: 0.2
    -  name: steel
       description: Steel of the tower
