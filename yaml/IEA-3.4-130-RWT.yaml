@@ -383,7 +383,8 @@ components:
           hss_input_length: 1.5
           distance_hub2mb: 1.912
           yaw_motors_number: 1
-          efficiency: 0.955
+          gearbox_efficiency: 0.955
+          generator_efficiency: 0.9808
     tower:
         outer_shape_bem:
             reference_axis: &ref_axis_tower
