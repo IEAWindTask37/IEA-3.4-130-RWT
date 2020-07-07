@@ -1,5 +1,5 @@
 ------- SERVODYN v1.05.* INPUT FILE --------------------------------------------
-AeroElasticSE FAST driver
+Generated with AeroElasticSE FAST driver
 ---------------------- SIMULATION CONTROL --------------------------------------
 False                  Echo        - Echo input data to <RootName>.ech (flag)
 "default"              DT          - Communication interval for controllers (s) (or "default")
@@ -59,12 +59,12 @@ True                   GenTiStp    - Method to stop the generator {T: timed usin
 0.0                    NacYawF     - Final yaw angle for override yaw maneuvers (degrees)
 ---------------------- TUNED MASS DAMPER ---------------------------------------
 False                  CompNTMD    - Compute nacelle tuned mass damper {true/false} (flag)
-"a.dat" NTMDfile    - Name of the file for nacelle tuned mass damper (quoted string) [unused when CompNTMD is false]
+"a.dat"                NTMDfile    - Name of the file for nacelle tuned mass damper (quoted string) [unused when CompNTMD is false]
 False                  CompTTMD    - Compute tower tuned mass damper {true/false} (flag)
-"b.dat" TTMDfile    - Name of the file for tower tuned mass damper (quoted string) [unused when CompTTMD is false]
+"b.dat"                TTMDfile    - Name of the file for tower tuned mass damper (quoted string) [unused when CompTTMD is false]
 ---------------------- BLADED INTERFACE ---------------------------------------- [used only with Bladed Interface]
-"../controller/NREL/dll_linux/DISCON_IEA_landbased.dll" DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
-"DISCON.IN"            DLL_InFile  - Name of input file sent to the DLL (-) [used only with Bladed Interface]
+"path2rosco/ROSCO/build/libdiscon.dylib" DLL_FileName - Name/location of the dynamic library {.dll [Windows] or .so [Linux]} in the Bladed-DLL format (-) [used only with Bladed Interface]
+"IEA-3.4-130-RWT_DISCON.IN" DLL_InFile  - Name of input file sent to the DLL (-) [used only with Bladed Interface]
 "DISCON"               DLL_ProcName - Name of procedure in DLL to be called (-) [case sensitive; used only with DLL Interface]
 "default"              DLL_DT      - Communication interval for dynamic library (s) (or "default") [used only with Bladed Interface]
 False                  DLL_Ramp    - Whether a linear ramp should be used between DLL_DT time steps [introduces time shift when true] (flag) [used only with Bladed Interface]

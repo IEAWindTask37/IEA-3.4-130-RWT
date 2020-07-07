@@ -5,7 +5,9 @@ The documentation of the turbine and the design process is accessible here: http
 
 The data include the OpenFAST aeroelastic files, a .yaml file with the corresponding json schema and open-source controllers.
 
-A documentation is in progress describing in detail the .yaml file
+The documentation of the .yaml file is available at https://windio.readthedocs.io/en/latest/
+
+The OpenFAST model uses the ROSCO controller https://github.com/NREL/ROSCO 
 
 If you use the wind turbine, please cite it like this:
 

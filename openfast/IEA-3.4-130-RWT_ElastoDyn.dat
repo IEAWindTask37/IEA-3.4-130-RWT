@@ -1,5 +1,5 @@
 ------- ELASTODYN v1.03.* INPUT FILE -------------------------------------------
-AeroElasticSE FAST driver
+Generated with AeroElasticSE FAST driver
 ---------------------- SIMULATION CONTROL --------------------------------------
 False                  Echo        - Echo input data to "<RootName>.ech" (flag)
 3                      Method      - Integration method: {1: RK4, 2: AB4, or 3: ABM4} (-)
@@ -55,7 +55,7 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 0.0                    AzimB1Up    - Azimuth value to use for I/O when blade 1 points up (degrees)
 -5.0                   OverHang    - Distance from yaw axis to rotor apex [3 blades] or teeter pin [2 blades] (meters)
 2.5                    ShftGagL    - Distance from rotor apex [3 blades] or teeter pin [2 blades] to shaft strain gages [positive for upwind rotors] (meters)
--5.0                   ShftTilt    - Rotor shaft tilt angle (degrees)
+-4.999629720311564     ShftTilt    - Rotor shaft tilt angle (degrees)
 0.0995                 NacCMxn     - Downwind distance from the tower-top to the nacelle CM (meters)
 0.0                    NacCMyn     - Lateral  distance from the tower-top to the nacelle CM (meters)
 0.5843                 NacCMzn     - Vertical distance from the tower-top to the nacelle CM (meters)
@@ -99,7 +99,7 @@ False                  PtfmYDOF    - Platform yaw rotation DOF (flag)
 0.0                    TeetHSSp    - Rotor-teeter hard-stop linear-spring constant (N-m/rad) [used only for 2 blades and when TeetMod=1]
 ---------------------- DRIVETRAIN ----------------------------------------------
 95.5                   GBoxEff     - Gearbox efficiency (%)
-96.76                  GBRatio     - Gearbox ratio (-)
+97.0                   GBRatio     - Gearbox ratio (-)
 867637000.0            DTTorSpr    - Drivetrain torsional spring (N-m/rad)
 6215000.0              DTTorDmp    - Drivetrain torsional damper (N-m/(rad/s))
 ---------------------- FURLING -------------------------------------------------
@@ -116,9 +116,9 @@ True                   TabDelim    - Use tab delimiters in text tabular output f
 0.0                    TStart      - Time to begin tabular output (s) (currently unused)
 1                      DecFact     - Decimation factor for tabular output {1: output every time step} (-) (currently unused)
 0                      NTwGages    - Number of tower nodes that have strain gages for output [0 to 9] (-)
-         10,             19,             28    TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0]
+         10,              19,              28    TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0] TwrGagNd    - List of tower nodes that have strain gages [1 to TwrNodes] (-) [unused if NTwGages=0]
 3                      NBlGages    - Number of blade nodes that have strain gages for output [0 to 9] (-)
-          5,              9,             13    BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0] BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
+5, 9, 13               BldGagNd    - List of blade nodes that have strain gages [1 to BldNodes] (-) [unused if NBlGages=0]
                    OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
 "Azimuth"
 "BldPitch1"

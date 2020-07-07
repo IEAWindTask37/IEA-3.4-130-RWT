@@ -1,5 +1,5 @@
 ------- AERODYN v15.03.* INPUT FILE ------------------------------------------------
-AeroElasticSE FAST driver
+Generated with AeroElasticSE FAST driver
 ======  General Options  ============================================================================
 False                  Echo        - Echo the input to "<rootname>.AD.ech"?  (flag)
 "default"              DTAero      - Time interval for aerodynamic calculations {or "default"} (s)
@@ -12,7 +12,7 @@ False                  FrozenWake  - Assume frozen wake during linearization? (f
 False                  CavitCheck  - Perform cavitation check? (flag) TRUE will turn off unsteady aerodynamics
 ======  Environmental Conditions  ===================================================================
  1.225000000000000e+00 AirDens     - Air density (kg/m^3)
- 1.479232653061225e-05 KinVisc     - Kinematic air viscosity (m^2/s)
+ 1.477551020408163e-05 KinVisc     - Kinematic air viscosity (m^2/s)
  3.350000000000000e+02 SpdSound    - Speed of sound (m/s)
  1.035000000000000e+05 Patm        - Atmospheric pressure (Pa) [used only when CavitCheck=True]
  1.700000000000000e+03 Pvap        - Vapour pressure of fluid (Pa) [used only when CavitCheck=True]
@@ -34,6 +34,7 @@ False                  TIDrag      - Include the drag term in the tangential-ind
 3                      UAMod       Unsteady Aero Model Switch (switch) {1=Baseline model (Original), 2=Gonzalez's variant (changes in Cn,Cc,Cm), 3=Minemma/Pierce variant (changes in Cc and Cm)} [used only when AFAeroMod=2]
 True                   FLookup     Flag to indicate whether a lookup for f' will be calculated (TRUE) or whether best-fit exponential equations will be used (FALSE); if FALSE S1-S4 must be provided in airfoil input files (flag) [used only when AFAeroMod=2]
 ======  Airfoil Information =========================================================================
+1                      AFTabMod    - Interpolation method for multiple airfoil tables {1=1D interpolation on AoA (first table only); 2=2D interpolation on AoA and Re; 3=2D interpolation on AoA and UserProp} (-)
 1                      InCol_Alfa  - The column in the airfoil tables that contains the angle of attack (-)
 2                      InCol_Cl    - The column in the airfoil tables that contains the lift coefficient (-)
 3                      InCol_Cd    - The column in the airfoil tables that contains the drag coefficient (-)
@@ -76,33 +77,30 @@ True                   UseBlCm     - Include aerodynamic pitching moment in calc
 "IEA-3.4-130-RWT_AeroDyn15_blade.dat" ADBlFile(2) - Name of file containing distributed aerodynamic properties for Blade #2 (-) [unused if NumBl < 2]
 "IEA-3.4-130-RWT_AeroDyn15_blade.dat" ADBlFile(3) - Name of file containing distributed aerodynamic properties for Blade #3 (-) [unused if NumBl < 3]
 ======  Tower Influence and Aerodynamics ============================================================= [used only when TwrPotent/=0, TwrShadow=True, or TwrAero=True]
-11                      NumTwrNds   - Number of tower nodes used in the analysis  (-) [used only when TwrPotent/=0, TwrShadow=True, or TwrAero=True]
+11                     NumTwrNds   - Number of tower nodes used in the analysis  (-) [used only when TwrPotent/=0, TwrShadow=True, or TwrAero=True]
 TwrElev        TwrDiam        TwrCd
 (m)              (m)           (-)
- 0.000000000000000e+00  1.000000000000000e+01  1.000000000000000e+00 
- 1.080000000000000e+01  9.400000000000000e+00  1.000000000000000e+00 
- 2.160000000000000e+01  8.800000000000000e+00  1.000000000000000e+00 
- 3.240000000000000e+01  8.200000000000000e+00  1.000000000000000e+00 
- 4.320000000000000e+01  7.600000000000000e+00  1.000000000000000e+00 
- 5.400000000000000e+01  7.000000000000000e+00  1.000000000000000e+00 
- 6.480000000000000e+01  6.400000000000000e+00  1.000000000000000e+00 
- 7.560000000000000e+01  5.800000000000000e+00  1.000000000000000e+00 
- 8.640000000000000e+01  5.200000000000000e+00  1.000000000000000e+00 
- 9.720000000000000e+01  4.600000000000000e+00  1.000000000000000e+00 
- 1.080000000000000e+02  4.000000000000000e+00  1.000000000000000e+00 
+ 0.000000000000000e+00  5.990000000000000e+00  1.000000000000000e+00 
+ 1.080000000000000e+01  5.930000000000000e+00  1.000000000000000e+00 
+ 2.161000000000000e+01  5.930000000000000e+00  1.000000000000000e+00 
+ 3.241000000000000e+01  5.930000000000000e+00  1.000000000000000e+00 
+ 4.322000000000000e+01  5.930000000000000e+00  1.000000000000000e+00 
+ 5.402000000000000e+01  5.930000000000000e+00  1.000000000000000e+00 
+ 6.481999999999999e+01  5.850000000000000e+00  1.000000000000000e+00 
+ 7.563000000000000e+01  5.120000000000000e+00  1.000000000000000e+00 
+ 8.643000000000001e+01  4.360000000000000e+00  1.000000000000000e+00 
+ 9.723000000000000e+01  3.610000000000000e+00  1.000000000000000e+00 
+ 1.080000000000000e+02  3.000000000000000e+00  1.000000000000000e+00 
 ======  Tower Influence and Aerodynamics ============================================================= [used only when TwrPotent/=0, TwrShadow=True, or TwrAero=True]
 True                   SumPrint    - Generate a summary file listing input options and interpolated properties to "<rootname>.AD.sum"?  (flag)
 9                      NBlOuts     - Number of blade node outputs [0 - 9] (-)
-1, 4, 7, 12, 18, 23, 27, 29, 30 BlOutNd     - Blade nodes whose values will be output  (-)
+1, 4, 7, 13, 18, 23, 26, 28, 30 BlOutNd     - Blade nodes whose values will be output  (-)
 0                      NTwOuts     - Number of tower node outputs [0 - 9]  (-)
 1, 2, 6                TwOutNd     - Tower nodes whose values will be output  (-)
                    OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
-"RtSpeed"
-"RtTSR"
-"RtVAvgxh"
-"RtVAvgyh"
-"RtVAvgzh"
-"RtSkew"
+"RtAeroCp"
+"RtAeroCq"
+"RtAeroCt"
 "RtAeroFxh"
 "RtAeroFyh"
 "RtAeroFzh"
@@ -111,8 +109,11 @@ True                   SumPrint    - Generate a summary file listing input optio
 "RtAeroMzh"
 "RtAeroPwr"
 "RtArea"
-"RtAeroCp"
-"RtAeroCq"
-"RtAeroCt"
+"RtSkew"
+"RtSpeed"
+"RtTSR"
+"RtVAvgxh"
+"RtVAvgyh"
+"RtVAvgzh"
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 ---------------------------------------------------------------------------------------

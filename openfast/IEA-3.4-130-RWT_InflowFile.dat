@@ -1,5 +1,5 @@
 ------- InflowWind v3.01.* INPUT FILE -------------------------------------------------------------------------
-AeroElasticSE FAST driver
+Generated with AeroElasticSE FAST driver
 ---------------------------------------------------------------------------------------------------------------
 False                  Echo        - Echo input data to <RootName>.ech (flag)
 1                      WindType    - switch for wind file type (1=steady; 2=uniform; 3=binary TurbSim FF; 4=binary Bladed-style FF; 5=HAWC format; 6=User defined)
@@ -9,9 +9,9 @@ False                  Echo        - Echo input data to <RootName>.ech (flag)
 0.0                    WindVyiList - List of coordinates in the inertial Y direction (m)
 90.0                   WindVziList - List of coordinates in the inertial Z direction (m)
 ================== Parameters for Steady Wind Conditions [used only for WindType = 1] =========================
-5.0                   HWindSpeed  - Horizontal windspeed                            (m/s)
+5.0                    HWindSpeed  - Horizontal windspeed                            (m/s)
 110.0                  RefHtT1     - Reference height for horizontal wind speed      (m)
-0.0                    PLexp       - Power law exponent                              (-)
+0.2                    PLexp       - Power law exponent                              (-)
 ================== Parameters for Uniform wind file   [used only for WindType = 2] ============================
 "./Wind/IEAonshore_10mps.bts" FilenameT2  - Filename of time series data for uniform wind field.      (-)
 110.0                  RefHtT2     - Reference height for horizontal wind speed                (m)
@@ -48,8 +48,5 @@ False                  TowerFile   - Have tower file (.twr) (flag)
 ====================== OUTPUT ==================================================
 False                  SumPrint    - Print summary data to <RootName>.IfW.sum (flag)
 OutList      - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
-"Wind1VelX"               X-direction wind velocity at point WindList(1)
-"Wind1VelY"               Y-direction wind velocity at point WindList(1)
-"Wind1VelZ"               Z-direction wind velocity at point WindList(1)
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 ---------------------------------------------------------------------------------------
