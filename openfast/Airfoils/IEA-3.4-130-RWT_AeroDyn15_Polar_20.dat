@@ -5,12 +5,13 @@
 ! ------------------------------------------------------------------------------
 DEFAULT                  InterpOrd   ! Interpolation order to use for quasi-steady table lookup {1=linear; 3=cubic spline; "default"} [default=3]
 1                        NonDimArea  ! The non-dimensional area of the airfoil (area/chord^2) (set to 1.0 if unsure or unneeded)
-@"AF20_Coords.txt"       NumCoords   ! The number of coordinates in the airfoil shape file. Set to zero if coordinates not included.
+@"IEA-3.4-130-RWT_AF20_Coords.txt"       NumCoords   ! The number of coordinates in the airfoil shape file. Set to zero if coordinates not included.
+AF20_BL.txt              BL_file     ! The file name including the boundary layer characteristics of the profile. Ignored if the aeroacoustic module is not called.
 1                        NumTabs     ! Number of airfoil tables in this file.  Each table must have lines for Re and Ctrl.
 ! ------------------------------------------------------------------------------
 ! data for table 1 
 ! ------------------------------------------------------------------------------
-8.111139                 Re          ! Reynolds number in millions
+8.111295                 Re          ! Reynolds number in millions
 0                        Ctrl        ! Control setting (must be 0 for current AirfoilInfo)
 True                     InclUAdata  ! Is unsteady aerodynamics data included in this table? If TRUE, then include 30 UA coefficients below this line
 !........................................
