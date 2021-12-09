@@ -18,7 +18,7 @@ default                DT          - Communication interval for controllers (s) 
 ---------------------- GENERATOR AND TORQUE CONTROL ----------------------------
 5                      VSContrl    - Variable-speed control mode {0: none, 1: simple VS, 3: user-defined from routine UserVSCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 1                      GenModel    - Generator model {1: simple, 2: Thevenin, 3: user-defined from routine UserGen} (switch) [used only when VSContrl=0]
-97.16582352806277      GenEff      - Generator efficiency [ignored by the Thevenin and user-defined generator models] (%)
+94.15572457476983      GenEff      - Generator efficiency [ignored by the Thevenin and user-defined generator models] (%)
 True                   GenTiStr    - Method to start the generator {T: timed using TimGenOn, F: generator speed using SpdGenOn} (flag)
 True                   GenTiStp    - Method to stop the generator {T: timed using TimGenOf, F: when generator power = 0} (flag)
 99999.0                SpdGenOn    - Generator speed to turn on the generator for a startup (HSS speed) (rpm) [used only when GenTiStr=False]
@@ -44,20 +44,20 @@ True                   GenTiStp    - Method to stop the generator {T: timed usin
 99999.0                TEC_RLR     - Rotor leakage reactance (ohms) [used only when VSContrl=0 and GenModel=2]
 99999.0                TEC_MR      - Magnetizing reactance (ohms) [used only when VSContrl=0 and GenModel=2]
 ---------------------- HIGH-SPEED SHAFT BRAKE ----------------------------------
-1                      HSSBrMode   - HSS brake model {0: none, 1: simple, 3: user-defined from routine UserHSSBr, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
+0                      HSSBrMode   - HSS brake model {0: none, 1: simple, 3: user-defined from routine UserHSSBr, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
 99999.0                THSSBrDp    - Time to initiate deployment of the HSS brake (s)
 99999.0                HSSBrDT     - Time for HSS-brake to reach full deployment once initiated (sec) [used only when HSSBrMode=1]
 99999.0                HSSBrTqF    - Fully deployed HSS-brake torque (N-m)
 ---------------------- NACELLE-YAW CONTROL -------------------------------------
 0                      YCMode      - Yaw control mode {0: none, 3: user-defined from routine UserYawCont, 4: user-defined from Simulink/Labview, 5: user-defined from Bladed-style DLL} (switch)
-0.0                    TYCOn       - Time to enable active yaw control (s) [unused when YCMode=0]
+99999.0                TYCOn       - Time to enable active yaw control (s) [unused when YCMode=0]
 0.0                    YawNeut     - Neutral yaw position--yaw spring force is zero at this yaw (degrees)
-0.0                    YawSpr      - Nacelle-yaw spring constant (N-m/rad)
-0.0                    YawDamp     - Nacelle-yaw damping constant (N-m/(rad/s))
-0.0                    TYawManS    - Time to start override yaw maneuver and end standard yaw control (s)
+1849531938.6657026     YawSpr      - Nacelle-yaw spring constant (N-m/rad)
+587030.1877785949      YawDamp     - Nacelle-yaw damping constant (N-m/(rad/s))
+99999.0                TYawManS    - Time to start override yaw maneuver and end standard yaw control (s)
 0.25                   YawManRat   - Yaw maneuver rate (in absolute value) (deg/s)
 0.0                    NacYawF     - Final yaw angle for override yaw maneuvers (degrees)
---------------------- STRUCTURAL CONTROL ---------------------------------------
+---------------------- STRUCTURAL CONTROL ---------------------------------------
 0                      NumBStC     - Number of blade structural controllers (integer)
 "unused"               BStCfiles   - Name of the file for blade tuned mass damper (quoted string) [unused when CompNTMD is false]
 0                      NumNStC     - Number of nacelle structural controllers (integer)
