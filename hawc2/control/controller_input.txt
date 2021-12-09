@@ -1,0 +1,25 @@
+PI generator torque controller in region 1 (variable speed, variable power), starting at istate = 1
+K =   0.173804E+07 [Nm/(rad/s)^2]
+PI generator torque controller in region 2 (constant speed, variable power)
+I =   0.360174E+08 [kg*m^2]
+Kp =   0.262966E+08 [Nm/(rad/s)]
+Ki =   0.979555E+07 [Nm/rad]
+PI pitch angle controller in region 3 (constant speed, constant power)
+Kp =   0.172598E+01 [rad/(rad/s)]
+Ki =   0.584358E+00 [rad/rad]
+K1 =       11.33984 [deg], K2 =      425.97918 [deg^2] (dq/dtheta =     -292.56843 kNm/deg)
+********************************************
+Aerodynamic gains:
+********************************************
+ (1) theta [deg] (2) dq/dtheta [kNm/deg] (3) fit [kNm/deg]
+       3.61480    -393.89712    -394.80485
+       6.76482    -497.51854    -498.53174
+       8.89839    -579.15847    -576.53022
+      10.68077    -647.80121    -646.48389
+      12.26171    -713.93445    -712.18344
+      13.70773    -776.64715    -775.28197
+      15.09843    -833.08869    -838.67649
+      16.39176    -895.88251    -900.01648
+      17.60242    -960.79609    -959.51766
+      18.81023   -1024.18736   -1020.88486
+       0.00000       0.00000       0.00000

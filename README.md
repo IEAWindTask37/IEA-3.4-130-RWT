@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/IEAWindTask37/IEA-3.4-130-RWT.svg?branch=master)](https://travis-ci.com/IEAWindTask37/IEA-3.4-130-RWT)
+
 # IEA-3.4-130-RWT
 This repository contains the model data of the onshore reference wind turbine developed within IEA Wind Task 37. 
 
