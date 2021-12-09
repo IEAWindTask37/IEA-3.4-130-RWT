@@ -1,11 +1,11 @@
 --------- BEAMDYN with OpenFAST INPUT FILE -------------------------------------------
 IEA-3.4-130-RWT blade
 ---------------------- SIMULATION CONTROL --------------------------------------
-True          Echo            - Echo input data to "<RootName>.ech" (flag)
+False         Echo            - Echo input data to "<RootName>.ech" (flag)
 True          QuasiStaticInit - Use quasistatic pre-conditioning with centripetal accelerations in initialization (flag) [dynamic solve only]
  0            rhoinf          - Numerical damping parameter for generalized-alpha integrator
  2            quadrature      - Quadrature method: 1=Gaussian; 2=Trapezoidal (switch)
-"DEFAULT"     refine          - Refinement factor for trapezoidal quadrature (-). DEFAULT = 1 [used only when quadrature=2]
+ 2            refine          - Refinement factor for trapezoidal quadrature (-). DEFAULT = 1 [used only when quadrature=2]
 "DEFAULT"     n_fact          - Factorization frequency (-). DEFAULT = 5
 "DEFAULT"     DTBeam          - Time step size (s).
 "DEFAULT"     load_retries    - Number of factored load retries before quitting the aimulation
@@ -73,7 +73,7 @@ True          RotStates       - Orient states in the rotating frame during linea
 	 -2.31282e+00 	 0.00000e+00 	 6.17143e+01 	 -3.83211e+00 
 	 -2.50000e+00 	 0.00000e+00 	 6.30000e+01 	 -4.64096e+00 
 ---------------------- MESH PARAMETER ------------------------------------------
-          5   order_elem     - Order of interpolation (basis) function (-)
+          10   order_elem     - Order of interpolation (basis) function (-)
 ---------------------- MATERIAL PARAMETER --------------------------------------
 "IEA-3.4-130-RWT_BeamDyn_Blade.dat"    BldFile - Name of file containing properties for blade (quoted string)
 ---------------------- PITCH ACTUATOR PARAMETERS -------------------------------
@@ -82,7 +82,7 @@ False         UsePitchAct - Whether a pitch actuator should be used (flag)
       2E+07   PitchK      - Pitch actuator stiffness (kg-m^2/s^2) [used only when UsePitchAct is true]
      500000   PitchC      - Pitch actuator damping (kg-m^2/s) [used only when UsePitchAct is true]
 ---------------------- OUTPUTS -------------------------------------------------
-True          SumPrint       - Print summary data to "<RootName>.sum" (flag)
+False         SumPrint       - Print summary data to "<RootName>.sum" (flag)
 "ES10.3E2"    OutFmt         - Format used for text tabular output, excluding the time channel.
           1   NNodeOuts      - Number of nodes to output to file [0 - 9] (-)
           1,          2,          3,          4,          5,          6    OutNd          - Nodes whose values will be output  (-)
